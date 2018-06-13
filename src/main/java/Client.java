@@ -45,7 +45,7 @@ public class Client {
 		}
 	}
 	public static void main(String[] args) throws Exception {
-		new Client().connect(8080, "127.0.0.1");
+		new Client().connect(8080, "192.168.93.1");
 //		Method method = INoexist.class.getDeclaredMethod("nomethod", int.class);
 //		System.out.println(method.getParameterTypes());
 	}

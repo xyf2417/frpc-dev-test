@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
        http://pro.xyf/schema/frpc http://pro.xyf/schema/frpc.xsd">
        
-    <frpc:protocol id="protocol" port="8080" />
+    <frpc:protocol id="protocol" port="8080" transport="netty"/>
     
     <frpc:registry id="registry" type="zookeeper">
     	<frpc:addresses>
