@@ -76,7 +76,7 @@ class TimeClientHandler extends ChannelInboundHandlerAdapter {
 				body.setParameterTypes(method.getParameterTypes());
 			}
 			else {
-				body.setArguments(new Object[]{1});
+				body.setArguments(new Object[]{i});
 				body.setInterfaceFullName(INoexist.class.getName());
 				body.setMethodName("nomethod");
 				Method method = INoexist.class.getDeclaredMethod("nomethod", int.class);

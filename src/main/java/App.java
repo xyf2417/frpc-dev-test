@@ -34,13 +34,13 @@ public class App
         System.out.println("App: " + app.getName());
         
         Provider provider = (Provider)context.getBean("providertestImpl");
-        System.out.println("Provider-" + provider.getInterface() + " " + provider.getTarget());
-        ((TestImpl)provider.getTarget()).fun("abc");
+        System.out.println("Provider-" + provider.getInterface() + " " + provider.getRef());
+        ((TestImpl)provider.getRef()).fun("abc");
         
         
         Provider provider1 = (Provider)context.getBean("providernoExist");
-        System.out.println("App: " + "Provider-" + provider1.getInterface() + " " + provider1.getTarget());
-        ((NoExist)provider1.getTarget()).nomethod(1);
+        System.out.println("App: " + "Provider-" + provider1.getInterface() + " " + provider1.getRef());
+        ((NoExist)provider1.getRef()).nomethod(1);
         
         ProviderServer server = (ProviderServer) ExtensionLoader.getExtensionLoader(ProviderServer.class).getExtension("netty");
 
