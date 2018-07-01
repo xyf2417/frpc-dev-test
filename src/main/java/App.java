@@ -3,6 +3,7 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 import xyf.frpc.config.Application;
 import xyf.frpc.config.ProtocolConfig;
 import xyf.frpc.config.Provider;
+import xyf.frpc.config.Reference;
 import xyf.frpc.config.RegistryConfig;
 import xyf.frpc.config.util.ExtensionLoader;
 import xyf.frpc.dev.test.interfaces.NoExist;
@@ -23,6 +24,8 @@ public class App
     	FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("D:\\developer\\java\\myeclipse\\frpc-dev-test\\spring-demo.xml");
         context.start();
         
+        Reference re = (Reference)context.getBean("referenceTest");
+        System.out.println("App: " + re.getId() + " " + re.getName() + " " + re.getInterface());
         
         ProtocolConfig p = (ProtocolConfig) context.getBean("protocol");
         System.out.println("App: " + p.getId() + " " + p.getName() + " " + p.getPort());
