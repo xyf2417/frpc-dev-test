@@ -25,7 +25,7 @@ public class App
         context.start();
         
         Reference re = (Reference)context.getBean("referenceTest");
-        System.out.println("App: " + re.getId() + " " + re.getName() + " " + re.getInterface());
+        System.out.println("App: " + re.getId() + " " + re.getName() + " " + re.getInterface() + " " + re.getHost());
         
         ProtocolConfig p = (ProtocolConfig) context.getBean("protocol");
         System.out.println("App: " + p.getId() + " " + p.getName() + " " + p.getPort());
