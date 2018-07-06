@@ -21,10 +21,10 @@ public class App
 {
     public static void main( String[] args ) throws InterruptedException
     {
-    	FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("D:\\developer\\java\\myeclipse\\frpc-dev-test\\spring-demo.xml");
+    	FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("D:\\developer\\java\\myeclipse\\frpc-dev-test\\spring-provider.xml");
         context.start();
         
-        Reference re = (Reference)context.getBean("referenceTest");
+        Reference re = (Reference)context.getBean("&referenceTest");
         System.out.println("App: " + re.getId() + " " + re.getName() + " " + re.getInterface() + " " + re.getHost());
         
         ProtocolConfig p = (ProtocolConfig) context.getBean("protocol");
