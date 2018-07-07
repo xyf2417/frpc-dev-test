@@ -19,9 +19,9 @@
 	
 	<frpc:application id="application" name="helloApplication"/>
 	
-	<frpc:provider id="providertestImpl" interface="xyf.frpc.dev.test.interfaces.ITest" ref="testImpl"/>
+	<frpc:service id="providertestImpl" interface="xyf.frpc.dev.test.interfaces.ITest" ref="testImpl"/>
 	
-	<frpc:provider id="providernoExist" interface="xyf.frpc.dev.test.interfaces.INoexist" ref="noExist"/>
+	<frpc:service id="providernoExist" interface="xyf.frpc.dev.test.interfaces.INoexist" ref="noExist"/>
 	
 	<frpc:reference id="referenceTest" interface="xyf.frpc.dev.test.interfaces.ITest" host="127.0.0.1"/>
 </beans>

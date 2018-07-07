@@ -2,7 +2,7 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import xyf.frpc.config.Application;
 import xyf.frpc.config.ProtocolConfig;
-import xyf.frpc.config.Provider;
+import xyf.frpc.config.Service;
 import xyf.frpc.config.Reference;
 import xyf.frpc.config.RegistryConfig;
 import xyf.frpc.config.util.ExtensionLoader;
@@ -36,12 +36,12 @@ public class App
         Application app = (Application)context.getBean("application");
         System.out.println("App: " + app.getName());
         
-        Provider provider = (Provider)context.getBean("providertestImpl");
+        Service provider = (Service)context.getBean("providertestImpl");
         System.out.println("Provider-" + provider.getInterface() + " " + provider.getRef());
         ((TestImpl)provider.getRef()).fun("abc");
         
         
-        Provider provider1 = (Provider)context.getBean("providernoExist");
+        Service provider1 = (Service)context.getBean("providernoExist");
         System.out.println("App: " + "Provider-" + provider1.getInterface() + " " + provider1.getRef());
         ((NoExist)provider1.getRef()).nomethod(1);
         
