@@ -3,6 +3,7 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 import xyf.frpc.config.Application;
 import xyf.frpc.config.ProtocolConfig;
 import xyf.frpc.config.RegistryConfig;
+import xyf.frpc.dev.test.interfaces.INoexist;
 import xyf.frpc.dev.test.interfaces.ITest;
 
 
@@ -13,19 +14,23 @@ public class ClientSpring {
         
         
         ProtocolConfig p = (ProtocolConfig) context.getBean("protocol");
-        System.out.println("App: " + p.getId() + " " + p.getName() + " " + p.getPort());
+        System.out.println("client: " + p.getId() + " " + p.getName() + " " + p.getPort());
         
         RegistryConfig r = (RegistryConfig)context.getBean("registry");
-        System.out.println("App: " + r.getAddresses());
+        System.out.println("client: " + r.getAddresses());
         
         Application app = (Application)context.getBean("application");
-        System.out.println("App: " + app.getName());
+        System.out.println("client: " + app.getName());
         
         System.out.println("-----------------------------------------------------");
         Object o = context.getBean("referenceTest");
         ITest itest = (ITest)o;
         //System.out.println("App: " + re.getId() + " " + re.getName() + " " + re.getInterface() + " " + re.getHost());
         System.out.println("client: " +itest.fun("client arg"));
+        
+        INoexist inoe = (INoexist)context.getBean("noExistTest");
+        
+        System.out.println("client: " + inoe.nomethod(10011));
         
         
 	}

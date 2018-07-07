@@ -23,12 +23,11 @@ import xyf.frpc.dev.test.interfaces.ITest;
 import xyf.frpc.remoting.codec.Decoder;
 import xyf.frpc.remoting.codec.Encoder;
 import xyf.frpc.remoting.codec.netty.NettyCodecByteBuf;
-import xyf.frpc.remoting.data.Head;
-import xyf.frpc.remoting.data.Request;
-import xyf.frpc.remoting.data.RequestBody;
-import xyf.frpc.remoting.data.Response;
-import xyf.frpc.remoting.data.ResponseBody;
-import xyf.frpc.remoting.handler.ResultHandler;
+import xyf.frpc.rpc.data.Head;
+import xyf.frpc.rpc.data.Request;
+import xyf.frpc.rpc.data.RequestBody;
+import xyf.frpc.rpc.data.Response;
+import xyf.frpc.rpc.data.ResponseBody;
 
 public class Client {
 	public void connect(int port, String host) throws Exception {
