@@ -32,6 +32,7 @@ public class ClientSpring {
         
         System.out.println("client: " + inoe.nomethod(10011));
         
+        System.out.println("client: " + inoe.toString());
         
 	}
 }
