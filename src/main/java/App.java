@@ -24,8 +24,6 @@ public class App
     	FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("D:\\developer\\java\\myeclipse\\frpc-dev-test\\spring-provider.xml");
         context.start();
         
-        Reference re = (Reference)context.getBean("&referenceTest");
-        System.out.println("App: " + re.getId() + " " + re.getName() + " " + re.getInterface() + " " + re.getHost());
         
         ProtocolConfig p = (ProtocolConfig) context.getBean("protocol");
         System.out.println("App: " + p.getId() + " " + p.getName() + " " + p.getPort());
@@ -45,7 +43,7 @@ public class App
         System.out.println("App: " + "Provider-" + provider1.getInterface() + " " + provider1.getRef());
         ((NoExist)provider1.getRef()).nomethod(1);
         
-        ProviderServer server = (ProviderServer) ExtensionLoader.getExtensionLoader(ProviderServer.class).getExtension("netty");
+        ProviderServer server = ExtensionLoader.getExtensionLoader(ProviderServer.class).getExtension("netty");
 
         
     }
