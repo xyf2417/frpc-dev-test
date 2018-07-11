@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import xyf.frpc.config.Application;
@@ -27,6 +29,8 @@ public class ClientSpring {
         ITest itest = (ITest)o;
         //System.out.println("App: " + re.getId() + " " + re.getName() + " " + re.getInterface() + " " + re.getHost());
         System.out.println("client: " +itest.fun("client arg"));
+
+        
         
         INoexist inoe = (INoexist)context.getBean("noExistTest");
         
