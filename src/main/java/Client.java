@@ -67,11 +67,10 @@ class TimeClientHandler extends ChannelInboundHandlerAdapter {
 		try{
 		for(int i = 0; i < 10; i++) {
 			Head head = new Head();
-			head.setMagic(Head.MAGIC);
-			head.setInvokeId(10*i);
-			
-			RequestBody body = new RequestBody();
+			head.setMagic(Head.MAGIC_NUMBER);
 
+			RequestBody body = new RequestBody();
+			body.setInvokeId(10*i);
 			if(i%2 == 0) {
 				body.setArguments(new Object[]{"This is arg " + i});
 				body.setInterfaceFullName(ITest.class.getName());
