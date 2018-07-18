@@ -44,7 +44,6 @@ public class App
         ((NoExist)provider1.getRef()).nomethod(1);
         
         ProviderServer server = ExtensionLoader.getExtensionLoader(ProviderServer.class).getExtension("netty");
-
         
     }
 }

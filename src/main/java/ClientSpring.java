@@ -10,7 +10,7 @@ import xyf.frpc.dev.test.interfaces.ITest;
 
 
 public class ClientSpring {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		FileSystemXmlApplicationContext context = new FileSystemXmlApplicationContext("D:\\developer\\java\\myeclipse\\frpc-dev-test\\spring-reference.xml");
         context.start();
         
@@ -34,6 +34,7 @@ public class ClientSpring {
         
         INoexist inoe = (INoexist)context.getBean("noExistTest");
         
+        TimeUnit.SECONDS.sleep(5);
         System.out.println("client: " + inoe.nomethod(10011));
         
         System.out.println("client: " + inoe.toString());
