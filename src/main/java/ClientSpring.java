@@ -32,12 +32,12 @@ public class ClientSpring {
 
         
         
-        INoexist inoe = (INoexist)context.getBean("noExistTest");
-        
-        TimeUnit.SECONDS.sleep(5);
-        System.out.println("client: " + inoe.nomethod(10011));
-        
-        System.out.println("client: " + inoe.toString());
+//        INoexist inoe = (INoexist)context.getBean("noExistTest");
+//        
+// 
+//        System.out.println("client: " + inoe.nomethod(10011));
+//        
+//        System.out.println("client: " + inoe.toString());
         
 	}
 }
