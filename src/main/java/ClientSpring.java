@@ -30,7 +30,9 @@ public class ClientSpring {
         //System.out.println("App: " + re.getId() + " " + re.getName() + " " + re.getInterface() + " " + re.getHost());
         System.out.println("client: " +itest.fun("client arg"));
 
+        TimeUnit.SECONDS.sleep(10);
         
+        System.out.println("client: " + itest.fun("arg2"));
         
 //        INoexist inoe = (INoexist)context.getBean("noExistTest");
 //        
