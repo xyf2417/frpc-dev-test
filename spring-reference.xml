@@ -18,7 +18,7 @@
 	
 	<frpc:application id="application" name="helloApplication"/>
 
-	<frpc:reference id="referenceTest" interface="xyf.frpc.dev.test.interfaces.ITest" host="127.0.0.1" port="8080" mock="testMock"/>
+	<frpc:reference id="referenceTest" interface="xyf.frpc.dev.test.interfaces.ITest" host="127.0.0.1" port="8080" mock="testMock" stub="xyf.frpc.dev.test.interfaces.ITestStub"/>
 	
 	<frpc:reference id="noExistTest" interface="xyf.frpc.dev.test.interfaces.INoexist" host="127.0.0.1" port="8080"/> 
 </beans>
